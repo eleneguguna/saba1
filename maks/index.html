@@ -8,7 +8,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title> SABA </title>
 	<!-- Place favicon.ico in the root directory -->
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -402,41 +402,63 @@
 						<div class="cform_box">
 
 							<!-- comment-form -->
-							<form id="contact-form" action="mail.php" method="post">
+							<form id="contact-form">
 								<div id="main_form">
 									<div class="row">
 										<div class="col-sm-6">
 											<div class="form-group">
-												<input class="form-control" type="text" name="name" placeholder="Name">
+												<input class="form-control" type="text" name="Name" placeholder="Name"
+													   id="name">
 											</div>
 										</div><!-- End Col -->
 
 										<div class="col-sm-6">
 											<div class="form-group">
-												<input class="form-control" type="email" name="email" placeholder="E-mail">
+												<input class="form-control" type="email" name="E-mail" placeholder="E-mail"
+													   id="mail">
 											</div>
 										</div><!-- End Col -->
 										<div class="col-xs-12">
 											<div class="form-group">
-												<input class="form-control" type="text" name="phone" placeholder="Phone">
-											</div>
-										</div><!-- End Col -->
-
-										<div class="col-xs-12">
-											<div class="form-group">
-												<input class="form-control" type="text" name="subject" placeholder="Subject">
+												<input class="form-control" type="text" name="Number"
+													   placeholder="მობ. ნომერი" id="number">
 											</div>
 										</div><!-- End Col -->
 
 										<div class="col-xs-12">
 											<div class="form-group">
-												<textarea class="form-control" name="message" cols="10" rows="4" placeholder="Message"></textarea>
+												<select class="form-control" name="Service" id="service">
+													<option value="" disabled selected>სერვისის ტიპი</option>
+													<option value="ელექტრო სამონტაჟო სამუშაოები">ელექტრო სამონტაჟო სამუშაოები</option>
+													<option value="ავტომატიზაცია">ავტომატიზაცია</option>
+													<option value="ძალოვანი ფარების წარმოება">ძალოვანი ფარების წარმოება</option>
+													<option value="PLC პროგრამირება & სკადას სისტემაში ინტეგრაცია">PLC პროგრამირება & სკადას სისტემაში ინტეგრაცია</option>
+													<option value="კომპრესორებისა და გენერატორების სერვისის სამუშაოები">კომპრესორებისა და გენერატორების სერვისის სამუშაოები
+													</option>
+													<option value="ინდუსტრიული დანადგარების ინსტალაცია & ექსპლუატაციაში
+														გაშვება">ინდუსტრიული დანადგარების ინსტალაცია & ექსპლუატაციაში
+														გაშვება
+													</option>
+													<option value="საქლორატორო სადგურების მონტაჟი">საქლორატორო სადგურების მონტაჟი</option>
+													<option value="წყლის სისტემების მონტაჟი & პროექტირება">წყლის სისტემების მონტაჟი & პროექტირება</option>
+													<option value="ამწე მექანიზმების მონტაჟი & სერვისი">ამწე მექანიზმების მონტაჟი & სერვისი</option>
+													<option value="ელექტრო ძრავების აღდგენის სერვისი">ელექტრო ძრავების აღდგენის სერვისი</option>
+												</select>
+											</div>
+										</div><!-- End Col -->
+
+										<div class="col-xs-12">
+											<div class="form-group">
+                                            <textarea class="form-control" name="Comment" cols="10" rows="4"
+													  placeholder="კომენტარი" id="comment"></textarea>
 											</div>
 										</div><!-- End Col -->
 
 										<div class="col-xs-12">
 											<div class="form_btn text-center">
-												<button type="submit" class="btn main_bg_btn fbb_btn">გაგზავნა</button>
+												<button type="submit" class="btn main_bg_btn fbb_btn" onclick="sendMail()">
+													გაგზავნა
+												</button>
 											</div>
 										</div> <!-- End Col -->
 									</div>
@@ -448,7 +470,8 @@
 					</div>
 				</div>
 			</div>
-		</div></div>
+		</div>
+	</div>
 </section>
 <!-- End Contact Area -->
 
@@ -500,6 +523,40 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/simplePlayer.js"></script>
 <script src="js/main.js"></script>
-<script src="js/ajax-mail.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+<script>
+	async function sendMail() {
+		const form = document.getElementById('contact-form');
+		const formData = form.elements;
+		debugger;
+		let data= "";
+		for(let i = 0 ; i < formData.length ; i++){
+			let item = formData.item(i);
+			if(!item.checkValidity()){
+				return;
+			}
+			if(item.name){
+				data=data+item.name +":"+ item.value + " ";
+			}
+		}
+
+		// 'Name: ' + name.value  +' \n '
+		// 'Email: ' + mail.value + ' \n ' +
+		// 'Service: ' + service.value + ' \n ' +
+		// 'Number: ' + number.value + ' \n ' +
+		// 'Comment: ' + comment.value;
+		Email.send({
+			SecureToken: "16bf8988-649e-491f-8dad-244b03aec010",
+			To: 'ltdsaba06@gmail.com',
+			From: "ltdsaba06@gmail.com",
+			Subject: "Contact Info",
+			Body: data
+		}).then(
+				message => alert(message)
+		);
+	}
+</script>
 </body>
 </html>

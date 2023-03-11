@@ -6,9 +6,9 @@
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">     
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title> Maks - Single Blog</title>
+	<title> SABA </title>
 	<!-- Place favicon.ico in the root directory -->
-    <link rel="icon" href="img/favicon.png">   
+    <link rel="icon" href="img/icon.jpg">
 	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="css/owl.carousel.min.css" />
@@ -26,7 +26,7 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->	
 </head>
-	<body>
+<body onload="load_product_details()">
 
 		
 		<!-- Star Header Area -->		
@@ -93,8 +93,8 @@
 	                <div class="col-sm-12 content">
 	                	
 	                    <article>
-	                       <img alt="" src="img/single-blog.jpg">
-	                        <div class="article-content">
+							<img id='product_image' alt="" src="">
+							<div class="article-content" id="content">
 	                            <ul>
 	                                <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
 	                                <li><i class="fa fa-calendar"></i> August/10/2019 </li>
@@ -170,5 +170,82 @@
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/simplePlayer.js"></script>			
 		<script src="js/main.js"></script>
+
+		<script>
+			const products = {
+				'1': {
+					'img': 'img/dzravis_muxruchebi/avtomaturiMuxruchi.jpg',
+					'innerHtml':`
+                        <ul>
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-calendar"></i> August/10/2019</li>
+                            <li><i class="fa fa-comment"></i> <a href="#">14 Comments</a></li>
+                        </ul>
+                        <h4> Dolar site consectetur adipisicing elit blog title fo your nice post</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt
+                            utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullacoabris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut
+                            aliquip ex ea commodo consequat. dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempoididunt utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullacoabris nisi ut aliquip ex ea commodo consequat. dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut aliquip ex ea
+                            commodo consequat. </p>
+                        <blockquote> dolar site Blockquote post</blockquote>
+                        <p> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut
+                            aliquip ex ea commodo consequat. dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempoididunt utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullacoabris nisi ut aliquip ex ea commodo consequat. dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut aliquip ex ea
+                            commodo consequat. </p>`
+				},
+				'2': {
+					'img': 'img/dzravis_muxruchebi/meqanikuriMuxruchi.jpg',
+					'innerHtml':`
+                        <ul>
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-calendar"></i> August/10/2019</li>
+                            <li><i class="fa fa-comment"></i> <a href="#">14 Comments</a></li>
+                        </ul>
+                        <h4> Dolar site consectetur adipisicing elit blog title fo your nice post</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt
+                            utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                            ullacoabris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut
+                            aliquip ex ea commodo consequat. dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempoididunt utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullacoabris nisi ut aliquip ex ea commodo consequat. dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut aliquip ex ea
+                            commodo consequat. </p>
+                        <blockquote> dolar site Blockquote post</blockquote>
+                        <p> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut
+                            aliquip ex ea commodo consequat. dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempoididunt utpoidlabore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullacoabris nisi ut aliquip ex ea commodo consequat. dolor sit amet,
+                            consectetur adipisicing elit, sed do eiusmod tempoididunt utpoidlabore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullacoabris nisi ut aliquip ex ea
+                            commodo consequat. </p>`
+				}
+			}
+
+			function load_product_details() {
+				let full_url = document.URL;
+				let url_array = full_url.split('id=')
+				let last_segment = url_array[url_array.length - 1];
+				let product = products[last_segment]
+				let img = document.getElementById('product_image')
+				img.src = product.img;
+				document.getElementById("content").innerHTML=product.innerHtml;
+				// alert("Page is loaded");
+				// debugger;
+			}
+		</script>
 	</body>
 </html>
