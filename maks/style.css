@@ -946,13 +946,14 @@ ul, ol{
 }
 .why-choose-text .text {
     margin-bottom: 25px;
+    text-align: justify;
 }
 .list-style-three {
   margin-bottom: 15px;
   position: relative;
 }
 .list-style-three li {
-  color: #666;
+  color: #020202;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
