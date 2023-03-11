@@ -642,7 +642,7 @@ ul, ol{
 }
 
 #header.menu-shrink .nav > li > a{
-	color: #fff;
+	color: black;
 }
 .nav > li > a:hover,
 #header.menu-shrink .nav > li > a:hover {
