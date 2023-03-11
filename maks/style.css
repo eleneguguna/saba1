@@ -606,6 +606,7 @@ ul, ol{
 	-o-transition: all 0.4s ease-in-out;
 	-ms-transition: all 0.4s ease-in-out;
 	padding: 16px 0;
+    background-color: black;
 
 }
 .logo_area {
@@ -618,6 +619,7 @@ ul, ol{
     background-color: #fff;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
     width: 100%;
+    background-color: black;
 }
 #main_menu{
 	margin-top: 10px;
@@ -640,7 +642,7 @@ ul, ol{
 }
 
 #header.menu-shrink .nav > li > a{
-	color: #080808;
+	color: #fff;
 }
 .nav > li > a:hover,
 #header.menu-shrink .nav > li > a:hover {
