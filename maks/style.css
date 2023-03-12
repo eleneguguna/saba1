@@ -546,7 +546,7 @@ ul, ol{
   text-transform: capitalize;
 }
 .section_title::after {
-  background-image: url("img/separator.png");
+  background-image: url("maks/img/separator.png");
   bottom: -14px;
   content: "";
   height: 4px;
@@ -642,7 +642,7 @@ ul, ol{
 }
 
 #header.menu-shrink .nav > li > a{
-	color: black;
+	color: #ffffff;
 }
 .nav > li > a:hover,
 #header.menu-shrink .nav > li > a:hover {
@@ -783,7 +783,7 @@ ul, ol{
 }
 
 .slider_item3 {
-    background-image: url(img/slider/sl-3.jpg);
+    background-image: url(maks/img/slider/sl-3.jpg);
 
 }
 .single_slide::after {
@@ -1703,7 +1703,7 @@ a:hover, a:focus {
 .cform_box {
 	width: 100%;
 	background: #fff;
-	padding: 40px;
+	/*padding: 40px;*/
 	border: 1px solid #fafafa;
 	box-shadow: 0 0 20px rgba(0,0,0,0.02);
 }
@@ -1836,7 +1836,7 @@ a.f_skype:after{
   width: 40%;
 }
 .purschase-banner {
-  background: rgba(0, 0, 0, 0) url("img/banner__03.jpg") no-repeat fixed center center / cover ;
+  background: rgba(0, 0, 0, 0) url("maks/img/banner__03.jpg") no-repeat fixed center center / cover ;
   padding: 101px 0;
   text-align: left;
 }
@@ -1896,7 +1896,7 @@ a#scrollUp:hover {
 }
 /*breadcrumb*/
 .breadcrumb_area {
-  background: rgba(0, 0, 0, 0) url("img/banner__03.jpg") repeat scroll center center / cover ;
+  background: rgba(0, 0, 0, 0) url("maks/img/banner__03.jpg") repeat scroll center center / cover ;
   display: block;
   overflow: hidden;
   padding: 150px 0 80px;

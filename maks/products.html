@@ -57,11 +57,17 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul id="nav" class="nav navbar-nav">
                             <li><a href="index.html">მთავარი</a></li>
-                            <li><a href="#about_area">ჩვენს შესახებ</a></li>
-                            <li><a href="#service_area">სერვისები</a></li>
-                            <li><a href="#clients_area">პარტნიორები</a></li>
-                            <li><a href="/products.html">პროდუქტები</a></li>
-                            <li><a href="#contact_area">კონტაქტი</a></li>
+                            <li><a href="products.html">პროდუქტები</a></li>
+                            <li>
+                                <form name="George">
+                                    <p>
+                                        <select name="example" size="1" onChange="go()">
+                                            <option value="products.html" style="display: none ;" disabled selected>🇬🇪
+                                            </option>
+                                            <option value="products-en.html">🇬🇧</option>
+                                        </select></p>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -211,7 +217,7 @@
                     <div class="single_portfolio">
                         <img src="img/eleqtro_dzravebi/samPazaDzravi.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">სამ ფაზა ძრავი</h3>
+                            <h3 class="title">სამ ფაზიანი ძრავი</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=2" ></a></li>
@@ -224,7 +230,7 @@
                     <div class="single_portfolio">
                         <img src="img/kompresorebi/ozen-kompresor-azot-jeneratoru-v2-oONG.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ozen kompresor azot jeneratoru v2 oONG</h3>
+                            <h3 class="title">ozone Compressor  Nitrogen jeneratoru v2 oONG</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=24"></a></li>
@@ -238,7 +244,7 @@
                     <div class="single_portfolio">
                         <img src="img/kompresorebi/ozen-kompresor-osc-osc-v-serisi.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ozen kompresor osc osc v serisi</h3>
+                            <h3 class="title">ozone Compressor  osc osc v Series</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=20"></a></li>
@@ -251,7 +257,7 @@
                     <div class="single_portfolio">
                         <img src="img/kompresorebi/ozen-kompresor-osc-t-serisi.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ozen kompresor osc t serisi</h3>
+                            <h3 class="title">ozone Compressor  osc t Series</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=21"></a></li>
@@ -264,7 +270,7 @@
                     <div class="single_portfolio">
                         <img src="img/kompresorebi/ozen-kompresor-sogutlamli-tip-kurutucular-ODR.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ozen kompresor sogutlamli tip kurutucular ODR</h3>
+                            <h3 class="title">ozone Compressor  sogutlamli tip kurutucular ODR</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=23"></a></li>
@@ -278,7 +284,7 @@
                     <div class="single_portfolio">
                         <img src="img/kompresorebi/ozen-kompresor-tk-ck.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ozen kompresor tk ck</h3>
+                            <h3 class="title">ozone Compressor  tk ck</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=22"></a></li>
@@ -591,7 +597,7 @@
                     <div class="single_portfolio">
                         <img src="img/satadarigo_nawilebi/elevatoris%20gvedebi.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ელევატორის ღვედები</h3>
+                            <h3 class="title">ლიფტის ღვედები</h3>
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=13" ></a></li>
                             </ul>
@@ -603,7 +609,7 @@
                     <div class="single_portfolio">
                         <img src="img/satadarigo_nawilebi/elevatoris%20kovshi.jpg" alt="">
                         <div class="box-content">
-                            <h3 class="title">ელევატორის კოვში</h3>
+                            <h3 class="title">ლიფტის კოვში</h3>
 
                             <ul class="icon">
                                 <li><a href="product-detail.html?id=8" ></a></li>
@@ -811,5 +817,11 @@
 <script src="js/simplePlayer.js"></script>
 <script src="js/main.js"></script>
 <script src="js/ajax-mail.js"></script>
+<script>
+    function go() {
+        location =
+            document.George.example.options[document.George.example.selectedIndex].value
+    }
+</script>
 </body>
 </html>
