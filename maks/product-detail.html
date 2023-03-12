@@ -73,7 +73,7 @@
 <!-- End header area -->
 
 
-<div class="breadcrumb_area" style="background-color: #d2d2d9">
+<div class="breadcrumb_area" id="cover" style="background-color: #d2d2d9">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -83,33 +83,6 @@
     </div><!-- end container -->
 </div>
 <div id="content">
-    <div class="container blog-post-no-sidebar">
-        <div class="row">
-
-            <!-- start content1 -->
-            <div class="container">
-                <div class="row ">
-                    <div class="col-md-5 col-sm-6 col-xs-12">
-                        <div class="image display-block-image">
-                            <img alt="" src="img/kompresorebi/ozen-kompresor-osc-t-serisi.jpg" style=" border-radius: 10%;">
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-sm-6 col-xs-12">
-                        <div class="why-choose-text">
-                            <div class="title">
-                                <h2>OSC T სერიის კომპრესორები</h2>
-                            </div>
-                            <br>
-
-                            <div class="text">Ozen Kompresor OSC T ავზზე დამონტაჟებული ხრახნიანი კომპრესორების სერია შექმნილია მცირე და საშუალო ზომის კომპანიების საჰაერო მოთხოვნილებების დასაკმაყოფილებლად, როგორიცაა ავტომომსახურების სადგურები, სარემონტო მაღაზიები, საღებავების მაღაზიები და სამშენებლო ინდუსტრია. (ძირითადი ტექსტი, რომელიც უნდა გამოჩნდეს , როდესაც პროდუქტებში ავირჩევთ კომპრესორებს, ვერტიკალურად ჩამოიშლება ყველა კატეგორია რა კომპრესორებიც გვაქვს და შემდეგ დაწვრილებითი ინფორმაცია კონკრეტულის არჩევისას)   </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div><!-- end content --><br><br><br>
-            <div class="text"> <strong> დაწვრილებითი : </strong>OSC T სერია, რომლის კონფიგურაცია შესაძლებელია საჭიროებისამებრ, შეიძლება დამონტაჟდეს ავზზე, საშრობით ან მის გარეშე. სატანკოზე დამაგრებულ მოდელში საშრობით ჰაერი გაცივდება და შრება მილსადენში შესვლამდე. საშრობი ხელს უწყობს შეკუმშული ჰაერის სისტემის და აღჭურვილობის დაცვას ჟანგისა და კოროზიისგან. სერიის პროდუქტები მარტივი ინსტალაცია და შენარჩუნებაა და ისინი უზრუნველყოფენ საიმედო და მაღალი ხარისხის შეკუმშულ ჰაერს. OSC T სერია გამოირჩევა ენერგოეფექტურობით, რომელიც აღემატება მსგავსი სიმძლავრის დგუშის კომპრესორებს. სიხშირის ინვერტორი არჩევითია ამ სერიისთვის.</div>
-        </div><!-- end row -->
-    </div><!-- end container -->`
 </div>
 
 
@@ -1887,12 +1860,19 @@ V/F კონტროლი, ჩამონტაჟებული PID კო
     </div><!-- end container -->`
         }
     }
+    const covers={
+        '03':'img/cavers/dizel.png',
+        '01':'img/cavers/PLC.png'
+    }
 
     function load_product_details() {
         let full_url = document.URL;
         let url_array = full_url.split('id=')
-        let last_segment = url_array[url_array.length - 1];
+        url_array=url_array[url_array.length - 1].split('+cover_name=')
+        let last_segment = url_array[0];
+        let cover=document.getElementById("cover")
         let product = products[last_segment]
+        cover.style.background="rgba(0, 0, 0, 0) url("+covers[url_array[url_array.length-1]]+") repeat scroll center center / cover"
         // let img = document.getElementById('product_image')
         // img.src = product.img;
         document.getElementById("content").innerHTML = product.innerHtml;
