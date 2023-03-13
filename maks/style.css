@@ -565,7 +565,7 @@ ul, ol {
 }
 
 .section_title::after {
-    background-image: url("maks/img/separator.png");
+    /*background-image: url("maks/img/separator.png");*/
     bottom: -14px;
     content: "";
     height: 4px;
@@ -824,7 +824,7 @@ ul, ol {
 }
 
 .slider_item3 {
-    background-image: url(maks/img/slider/sl-3.jpg);
+    /*background-image: url(maks/img/slider/sl-3.jpg);*/
 
 }
 
