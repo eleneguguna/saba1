@@ -46,7 +46,7 @@
 
 
 <!-- Star Header Area -->
-<header id="header">
+<header id="header" style="margin-bottom: 10%">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-3">
@@ -88,20 +88,10 @@
 </header>
 <!-- End header area -->
 
-
-<div class="breadcrumb_area" id="cover" style="background-color: #d2d2d9">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h3></h3>
-            </div><!-- end home-top -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div>
-<a href="products.html" style="margin-left: 20% " class="animated btn main_bg_btn "> ყველა პროდუქტი</a>
+    <a href="products.html" style="margin-left: 20% " class="animated btn main_bg_btn "> ყველა პროდუქტი</a>
 
 
-<div id="content">
+<div class="container" id="content">
 </div>
 
 
@@ -1881,23 +1871,13 @@ V/F კონტროლი, ჩამონტაჟებული PID კო
     </div><!-- end container -->`
         }
     }
-    const covers={
-        '01':'img/cavers/dizel.png',
-        '02':'img/cavers/PLC.png',
-        '03':'img/cavers/electro_dzravi.png',
-        '04':'img/cavers/kompres.png',
-        '05':'img/cavers/reduct.png',
-        '06':'img/cavers/sixshrulGard.png'
-    }
 
     function load_product_details() {
         let full_url = document.URL;
         let url_array = full_url.split('id=')
-        url_array=url_array[url_array.length - 1].split('+cover_name=')
-        let last_segment = url_array[0];
-        let cover=document.getElementById("cover")
+
+        let last_segment = url_array[url_array.length-1];
         let product = products[last_segment]
-        cover.style.background="rgba(0, 0, 0, 0) url("+covers[url_array[url_array.length-1]]+") repeat scroll center center / cover"
         // let img = document.getElementById('product_image')
         // img.src = product.img;
         document.getElementById("content").innerHTML = product.innerHtml;
