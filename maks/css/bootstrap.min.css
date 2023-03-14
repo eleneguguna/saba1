@@ -4660,8 +4660,8 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .navbar-toggle .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 30px;
+    height: 30px;
     border-radius: 1px
 }
 
